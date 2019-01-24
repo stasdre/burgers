@@ -1,0 +1,19 @@
+.home{
+  background: url('../../img/texture.png') center center, 
+  url('../../img/video-bg.png') center center no-repeat;
+  background-size: cover;
+  padding-top: 13px;
+}
+
+.home__nav{
+  padding-left: 60px;
+}
+
+.home__promo{
+  margin-bottom: 87px;
+}
+
+.home__arrow{
+  display: flex;
+  justify-content: center;
+}

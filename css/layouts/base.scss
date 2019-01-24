@@ -1,0 +1,92 @@
+$thunderbird: #c1401e;
+$white: #ffffff;
+$black: #000000;
+$submarine: #c0c8cb;
+$tower_gray: #b0bec5;
+$cod_gray: #141414;
+$cinnabar_2: #e35028;
+$quill_gray: #d1cfcb;
+$cinnabar: #e45028;
+$silk: #c0afaa;
+$dove_gray: #626262;
+$silver_sand: #b5babd;
+$shark_2: #1f2122;
+$yellow_orange: #f9b43b;
+$shark: #2f3234;
+$mine_shaft: #3e3e3e;
+$geyser: #cfd8dc;
+$spring_wood_2: #f5f2ed;
+
+*{
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: 'Ubuntu', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1.42;
+  background-color: $white;
+}
+
+div,
+span,
+p,
+header,
+footer,
+article,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: normal;
+}
+
+ul li {
+  list-style: none;
+}
+
+button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.wrap {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 940px;
+}

@@ -1,0 +1,30 @@
+.promo{
+  display: flex;
+}
+
+.promo__burger, .promo__text{
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.promo__burger{
+  padding-left: 19px;
+}
+
+.promo__text{
+  padding-top: 63px;
+  padding-left: 10px;
+}
+
+.promo__desc{
+  color: $white;
+  font-family: Lifehack;
+  font-size: 65px;
+  line-height: 60px;
+}
+
+.promo__title{
+  margin-bottom: 12px;
+}

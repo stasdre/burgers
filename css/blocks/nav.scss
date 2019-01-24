@@ -1,0 +1,26 @@
+.nav__list{
+  display: flex;
+}
+
+.nav__item{
+  margin-right: 14px;
+  &:after{
+    content: "•";
+    display: inline-block;
+    color: $white;
+    margin-left: 16px;
+  }
+  &:last-child{
+    margin-right: 0;
+    &:after{
+      display: none;
+    }
+  }
+}
+
+.nav__link{
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: $white;
+}
