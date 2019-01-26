@@ -1,5 +1,49 @@
 .about{
   background: url('../img/privileges-bg.jpg') center center no-repeat;
   background-size: cover;
-  padding: 11% 0 14% 0;
+  display: flex;
+  align-items: center;
+}
+
+.about__list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.about__item{
+  flex: 1 1 0;
+}
+
+.about__img-cover{
+  display: flex;
+  justify-content: center;
+  max-height: 90px;
+  overflow: hidden;
+  margin-bottom: 10%;
+}
+
+.about__img{
+  display: block;
+  height: 100%;
+}
+
+.about__titile{
+  text-align: center;
+  font-family: Lifehack;
+  font-size: 24px;
+  line-height: 28.14px;
+  margin-bottom: 5%;
+}
+
+.about__desc{
+  text-align: center;
+  font-size: 14px;
+  line-height: 24.02px;
+  opacity: 0.8;
+  color: $shark;
+}
+
+.about__title{
+  margin-bottom: 4%;
 }

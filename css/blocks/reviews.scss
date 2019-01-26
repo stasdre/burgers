@@ -14,7 +14,7 @@
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  &:hover::after{
+  &:hover::before{
     content: "";
     display: block;
     position: absolute;
@@ -31,21 +31,19 @@
 }
 
 .reviews__content{
-  position: absolute;
-  top: 12%;
-  left: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100%;
   padding: 0 20px;
   overflow: hidden;
   opacity: 0;
   transition: 1s;
-  z-index: 10;
 }
 
-.reviews__title{
-  color: $white;
-  font-family: Gagalin;
-  font-size: 14px;
-  line-height: 28.11px;
+.reviews__subtitle{
   margin-bottom: 15px;
 }
 
@@ -59,5 +57,5 @@
 }
 
 .reviews__btn{
-  width: 46%;
+  display: flex;
 }
