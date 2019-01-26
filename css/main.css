@@ -415,4 +415,73 @@ table {
   align-items: center;
 }
 
+.team__title {
+  margin-bottom: 9%;
+}
+
+.team__content {
+  max-height: 95%;
+  width: 62%;
+}
+
+.accordeon__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.accorderon__item {
+  margin-bottom: 6%;
+}
+.accorderon__item:last-child {
+  margin-bottom: 0;
+}
+
+.accorderon__subtitle {
+  display: flex;
+  align-items: center;
+}
+.accorderon__subtitle::before {
+  content: "";
+  width: 9px;
+  height: 7px;
+  background: url("../img/arrow_down.png") center center no-repeat;
+  margin-right: 10px;
+}
+
+.accorderon__item_active .accorderon__subtitle::before {
+  background: url("../img/arrow_top.png") center center no-repeat;
+}
+.accorderon__item_active .accordeon__content {
+  opacity: 1;
+  height: 100%;
+}
+
+.accordeon__content {
+  display: flex;
+  align-items: center;
+  padding-left: 5%;
+  height: 0;
+  opacity: 0;
+}
+
+.accordeon__cover {
+  flex-basis: 100px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #fff center center no-repeat/cover;
+  margin-right: 5%;
+}
+
+.accordeon__desc {
+  font-size: 14px;
+  color: #ffffff;
+  line-height: 24.01px;
+}
+
+.accordeon__title {
+  font-weight: bold;
+}
+
 /*# sourceMappingURL=main.css.map */
