@@ -32,12 +32,17 @@
     opacity: 1;
     height: 100%;
   }
+  .accorderon__subtitle{
+    color: $yellow_orange;
+  }
 }
 
 .accordeon__content{
   display: flex;
   align-items: center;
-  padding-left: 5%;
+  padding-left: 6%;
+  padding-top: 2%;
+  margin-bottom: 4%;
   height: 0;
   opacity: 0;
 }
@@ -49,7 +54,7 @@
   border-radius: 50%;
   overflow: hidden;
   background: #fff center center no-repeat / cover;
-  margin-right: 5%;
+  margin-right: 20px;
 }
 
 .accordeon__desc{
@@ -64,4 +69,8 @@
 
 .accordeon__desc{
   max-width: 208px;
+}
+
+.accordeon__text{
+  padding-top: 12px;
 }

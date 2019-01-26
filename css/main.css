@@ -416,6 +416,7 @@ table {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .team__title {
@@ -453,11 +454,16 @@ table {
   opacity: 1;
   height: 100%;
 }
+.accorderon__item_active .accorderon__subtitle {
+  color: #f9b43b;
+}
 
 .accordeon__content {
   display: flex;
   align-items: center;
-  padding-left: 5%;
+  padding-left: 6%;
+  padding-top: 2%;
+  margin-bottom: 4%;
   height: 0;
   opacity: 0;
 }
@@ -469,7 +475,7 @@ table {
   border-radius: 50%;
   overflow: hidden;
   background: #fff center center no-repeat/cover;
-  margin-right: 5%;
+  margin-right: 20px;
 }
 
 .accordeon__desc {
@@ -484,6 +490,10 @@ table {
 
 .accordeon__desc {
   max-width: 208px;
+}
+
+.accordeon__text {
+  padding-top: 12px;
 }
 
 /*# sourceMappingURL=main.css.map */
