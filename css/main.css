@@ -82,6 +82,11 @@ table {
   height: 100%;
   width: 940px; }
 
+.container_justify-center {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
 .titile {
   font-family: Gagalin;
   font-size: 72px;
@@ -399,3 +404,11 @@ table {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
+
+.arrow {
+  position: absolute;
+  bottom: 7%;
+  left: 49%;
+  width: 29px;
+  height: 14px;
+  background: url("../img/arrow-scroll.png") center center no-repeat; }
