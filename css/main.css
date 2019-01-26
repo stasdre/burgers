@@ -90,17 +90,17 @@ table {
   justify-content: center;
 }
 
-.titile {
+.title {
   font-family: Gagalin;
   font-size: 72px;
   line-height: 85px;
 }
 
-.titile_center {
+.title_center {
   text-align: center;
 }
 
-.titile_yellow {
+.title_yellow {
   color: #f9b43b;
 }
 
@@ -303,7 +303,7 @@ table {
   height: 100%;
 }
 
-.about__titile {
+.about__title {
   text-align: center;
   font-family: Lifehack;
   font-size: 24px;
