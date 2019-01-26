@@ -403,13 +403,16 @@ table {
   background: url("../img/team-bg.jpg") center center no-repeat/cover;
 }
 
-.team__content {
+.team__container {
   position: absolute;
   top: 0;
   right: 0;
   width: 49%;
   height: 100%;
   background-color: rgba(47, 50, 52, 0.93);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*# sourceMappingURL=main.css.map */
