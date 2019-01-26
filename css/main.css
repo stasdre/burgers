@@ -178,6 +178,12 @@ table {
   flex: 0.7;
 }
 
+.home__arrow {
+  position: absolute;
+  bottom: 6%;
+  left: 49%;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -246,8 +252,7 @@ table {
   align-items: center;
 }
 
-.promo__burger, .promo__text {
-  height: 100%;
+.promo__text {
   flex-basis: 50%;
   display: flex;
   flex-direction: column;
@@ -386,9 +391,7 @@ table {
 }
 
 .arrow {
-  position: absolute;
-  bottom: 7%;
-  left: 49%;
+  display: block;
   width: 29px;
   height: 14px;
   background: url("../img/arrow-scroll.png") center center no-repeat;
@@ -417,11 +420,6 @@ table {
 
 .team__title {
   margin-bottom: 9%;
-}
-
-.team__content {
-  max-height: 95%;
-  width: 62%;
 }
 
 .accordeon__list {
@@ -482,6 +480,10 @@ table {
 
 .accordeon__title {
   font-weight: bold;
+}
+
+.accordeon__desc {
+  max-width: 60%;
 }
 
 /*# sourceMappingURL=main.css.map */
