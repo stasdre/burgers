@@ -85,8 +85,10 @@ table {
 }
 
 .container {
+  position: relative;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
+  height: 100%;
   width: 940px;
 }

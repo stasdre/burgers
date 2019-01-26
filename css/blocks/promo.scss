@@ -1,8 +1,10 @@
 .promo{
   display: flex;
+  align-items: center;
 }
 
 .promo__burger, .promo__text{
+  height: 100%;
   flex-basis: 50%;
   display: flex;
   flex-direction: column;
@@ -14,8 +16,7 @@
 }
 
 .promo__text{
-  padding-top: 63px;
-  padding-left: 10px;
+  padding: 6% 0 0 2%;
 }
 
 .promo__desc{
