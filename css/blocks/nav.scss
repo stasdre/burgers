@@ -3,12 +3,11 @@
 }
 
 .nav__item{
-  margin-right: 14px;
   &:after{
     content: "•";
     display: inline-block;
+    margin: 0 14px;
     color: $white;
-    margin-left: 16px;
   }
   &:last-child{
     margin-right: 0;

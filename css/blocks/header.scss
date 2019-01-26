@@ -3,3 +3,13 @@
   justify-content: space-between;
   align-items: center;
 }
+
+.header__col{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.header__nav{
+  margin-right: 15px;
+}
