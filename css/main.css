@@ -582,4 +582,8 @@ table {
   padding: 62px 33px;
 }
 
+.work {
+  background: url("../img/work-bg.jpg") center center no-repeat/cover;
+}
+
 /*# sourceMappingURL=main.css.map */
