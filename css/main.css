@@ -528,14 +528,19 @@ table {
 
 .menu__item {
   height: 100%;
-  width: 80px;
   display: flex;
-  align-items: flex-end;
+}
+
+.menu__nav {
+  display: flex;
   justify-content: center;
+  height: 100%;
+  position: relative;
+  width: 80px;
   padding-bottom: 40px;
   background: center center no-repeat/cover;
 }
-.menu__item::before {
+.menu__nav::before {
   content: "";
   display: block;
   position: absolute;
@@ -552,23 +557,29 @@ table {
 .menu__item_active .menu__contant {
   opacity: 1;
   max-width: 541px;
+  width: 100%;
 }
 
 .menu__link {
+  display: block;
   height: 100%;
-  position: relative;
   writing-mode: vertical-lr;
   transform: rotate(180deg);
   color: #ffffff;
   font-family: Gagalin;
   font-size: 40px;
-  z-index: 10;
 }
 
 .menu__contant {
   overflow: hidden;
   opacity: 0;
   width: 0;
+  background: rgba(47, 50, 52, 0.93);
+  height: 100%;
+  color: #ffffff;
+  line-height: 24px;
+  font-size: 14px;
+  padding: 62px 33px;
 }
 
 /*# sourceMappingURL=main.css.map */
