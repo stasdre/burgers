@@ -61,7 +61,7 @@ ul li {
   list-style: none;
 }
 
-button {
+button, [type=button], [type=submit] {
   border: none;
   background: transparent;
   cursor: pointer;

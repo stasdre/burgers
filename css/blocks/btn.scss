@@ -1,5 +1,6 @@
 .btn{
   display: block;
+  cursor: pointer;
   background-color: $cinnabar;
   border-radius: 5px;
   text-transform: uppercase;
@@ -14,9 +15,20 @@
   }
 }
 
+
 .btn_grey{
   background-color: $shark;
   &:hover{
     background-color: $shark_2;
+  }
+}
+
+.btn_bg-none{
+  background-color: transparent;
+  border: none;
+  text-transform: none;
+  outline: none;
+  &:hover{
+    background-color: transparent;
   }
 }
