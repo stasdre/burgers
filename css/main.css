@@ -90,6 +90,10 @@ table {
   justify-content: center;
 }
 
+.container_align-center {
+  align-items: center;
+}
+
 .title {
   font-family: Gagalin;
   font-size: 72px;
@@ -595,6 +599,10 @@ table {
 
 .work {
   background: url("../img/work-bg.jpg") center center no-repeat/cover;
+}
+
+.work__title {
+  margin-bottom: 50px;
 }
 
 .order {
