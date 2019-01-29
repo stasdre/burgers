@@ -712,4 +712,74 @@ table {
   height: 9px;
 }
 
+.map {
+  background: url("../img/map-bg.jpg") center center no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 60px;
+  width: 100%;
+  background-color: #000;
+}
+
+.footer__container {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contacts {
+  font-size: 14px;
+}
+
+.contacts__address {
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+
+.contacts__phone {
+  color: #e45028;
+  font-weight: bold;
+}
+
+.socials__list {
+  display: flex;
+  align-items: center;
+}
+
+.socials__item {
+  margin-right: 20px;
+}
+.socials__item:last-child {
+  margin-right: 0;
+}
+
+.socials__link {
+  display: block;
+  width: 23px;
+  height: 23px;
+  background: transparent center center no-repeat;
+}
+
+.socials__item_vk {
+  background-image: url("../img/vk.png");
+}
+
+.socials__item_fb {
+  background-image: url("../img/fb.png");
+}
+
+.socials__item_in {
+  background-image: url("../img/in.png");
+}
+
+.socials__item_tw {
+  background-image: url("../img/tw.png");
+}
+
 /*# sourceMappingURL=main.css.map */
