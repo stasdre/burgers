@@ -221,14 +221,12 @@ table {
 
 .logo {
   display: block;
-  max-width: 95px;
-  max-height: 70px;
   overflow: hidden;
 }
 
-.logo__img {
-  display: block;
-  width: 100%;
+.logo__icon {
+  width: 92px;
+  height: 69px;
 }
 
 .nav__list {
@@ -411,9 +409,11 @@ table {
 
 .arrow {
   display: block;
+}
+
+.arrow__icon {
   width: 29px;
   height: 14px;
-  background: url("../img/arrow-scroll.png") center center no-repeat;
 }
 
 .slider {
@@ -751,8 +751,16 @@ table {
 }
 
 .contacts__phone {
+  display: flex;
+  align-items: center;
   color: #e45028;
-  font-weight: bold;
+}
+
+.contacts__phone-icon {
+  fill: #e45028;
+  width: 12px;
+  height: 11px;
+  margin-right: 5px;
 }
 
 .socials__list {
@@ -769,25 +777,16 @@ table {
 
 .socials__link {
   display: block;
-  width: 23px;
-  height: 23px;
-  background: transparent center center no-repeat;
 }
 
-.socials__item_vk {
-  background-image: url("../img/vk.png");
+.social__icon {
+  width: 20px;
+  height: 20px;
+  opacity: 0.3;
+  transition: 0.3s;
 }
-
-.socials__item_fb {
-  background-image: url("../img/fb.png");
-}
-
-.socials__item_in {
-  background-image: url("../img/in.png");
-}
-
-.socials__item_tw {
-  background-image: url("../img/tw.png");
+.social__icon:hover {
+  opacity: 1;
 }
 
 /*# sourceMappingURL=main.css.map */

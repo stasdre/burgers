@@ -12,13 +12,14 @@
 
 .socials__link{
   display: block;
-  width: 23px;
-  height: 23px;
-  background: transparent center center no-repeat;
 }
 
-@each $social in (vk, fb, in, tw) {
-  .socials__item_#{$social}{
-    background-image: url('../img/#{$social}.png');
-  }  
+.social__icon{
+  width: 20px;
+  height: 20px;
+  opacity: .3;
+  transition: .3s;
+  &:hover{
+    opacity: 1;
+  }
 }

@@ -8,6 +8,14 @@
 }
 
 .contacts__phone{
+  display: flex;
+  align-items: center;
   color: $cinnabar;
-  font-weight: bold;
+}
+
+.contacts__phone-icon{
+  fill: $cinnabar;
+  width: 12px;
+  height: 11px;
+  margin-right: 5px;
 }
