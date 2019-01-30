@@ -1,6 +1,7 @@
 .team{
   position: relative;
-  background: url('../img/team-bg.jpg') center center no-repeat / cover;
+  background: url('../img/team-bg.jpg') center center no-repeat;
+  background-size: cover;
 }
 
 .team__container{
