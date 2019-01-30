@@ -518,7 +518,8 @@ table {
 
 .menu {
   position: relative;
-  background: url("../img/menu-bg.jpg") center center no-repeat/cover;
+  background: url("../img/menu-bg.jpg") center center no-repeat;
+  background-size: cover;
 }
 
 .menu__title {
