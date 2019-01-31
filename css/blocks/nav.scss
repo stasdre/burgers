@@ -1,5 +1,7 @@
 .nav__list{
   display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 .nav__item{

@@ -64,6 +64,10 @@
     margin-right: 0;
     width: 66%;
   }
+
+  .points{
+    display: none;
+  }
 }
 
 @media (max-width: 480px){
@@ -89,5 +93,24 @@
 
   .order__title{
     font-size: 3.125rem;
+  }
+
+  .form__group_x-480{
+    display: none;
+  }
+
+  .form__row{
+    justify-content: center;
+  }
+
+  .footer__container{
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .contacts{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }

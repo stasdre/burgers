@@ -235,6 +235,8 @@ table {
 
 .nav__list {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 .nav__item:after {
@@ -866,6 +868,10 @@ table {
     margin-right: 0;
     width: 66%;
   }
+
+  .points {
+    display: none;
+  }
 }
 @media (max-width: 480px) {
   .title {
@@ -890,6 +896,25 @@ table {
 
   .order__title {
     font-size: 3.125rem;
+  }
+
+  .form__group_x-480 {
+    display: none;
+  }
+
+  .form__row {
+    justify-content: center;
+  }
+
+  .footer__container {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
