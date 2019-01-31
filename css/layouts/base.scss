@@ -21,6 +21,10 @@ $spring_wood_2: #f5f2ed;
   box-sizing: border-box;
 }
 
+html{
+  font-size: 16px;
+}
+
 html,
 body {
   width: 100%;
@@ -90,7 +94,7 @@ table {
   flex-direction: column;
   margin: 0 auto;
   height: 100%;
-  width: 940px;
+  width: 94vw;
 }
 
 .container_justify-center{

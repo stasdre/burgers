@@ -7,12 +7,15 @@
 
 .about__list{
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
 }
 
 .about__item{
-  flex: 1 1 0;
+  flex-basis: 33.33%;
+  margin-right: 4%;
+  &:last-child{
+    margin-right: 0;
+  }
 }
 
 .about__img-cover{
@@ -23,15 +26,15 @@
   margin-bottom: 10%;
 }
 
-.about__img{
-  display: block;
-  height: 100%;
+.about__img-pic{
+  max-width: 89px;
+  max-height: 97px;
 }
 
 .about__title{
   text-align: center;
   font-family: Lifehack;
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 28.14px;
   margin-bottom: 5%;
 }

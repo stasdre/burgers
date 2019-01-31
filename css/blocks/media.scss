@@ -1,0 +1,93 @@
+@media (max-width: 768px){
+  .header__nav{ 
+    display: none;
+  }
+  .promo{
+    flex-direction: column;
+  }
+
+  .promo__text{
+    align-items: center;
+  }
+
+  .about__list{
+    flex-direction: column;
+  }
+
+  .about__item{
+    display: flex;
+    margin-right: 0;
+    margin-bottom: 10%;
+  }
+
+  .about__img{
+    margin-right: 2.8%;
+  }
+
+  .about__title, .about__desc{
+    text-align: left;
+  }
+
+  .team__container{
+    width: 100%;
+  }
+
+  .team__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+  }
+
+  .accordeon__content{
+    flex-direction: column;
+  }
+
+  .accorderon__subtitle{
+    font-size: 1.5625rem;
+  }
+
+  .reviews__item{
+    flex-basis: 50%;
+  }
+
+  .reviews__content{
+    align-items: center;
+    text-align: center;
+  }
+
+  .form__container{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form__col{
+    margin-right: 0;
+    width: 66%;
+  }
+}
+
+@media (max-width: 480px){
+  .title{
+    font-size: 3.9375rem;
+  }
+
+  .team__title{
+    font-size: 3.125rem;  
+  }
+
+  .reviews__des{
+    display: none;
+  }
+
+  .reviews__subtitle{
+    font-size: 1.5rem;
+  }
+
+  .form__col{
+    width: 100%;
+  }
+
+  .order__title{
+    font-size: 3.125rem;
+  }
+}
