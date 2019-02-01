@@ -1,0 +1,15 @@
+.burger-menu{
+  display: none;
+  flex-direction: column;
+}
+
+.burger-menu__item{
+  width: 24px;
+  height: 4px;
+  background-color: $white;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  &:last-child{
+    margin-bottom: 0;
+  }
+}

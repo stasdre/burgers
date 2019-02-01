@@ -68,6 +68,34 @@
   .points{
     display: none;
   }
+
+  .burger-menu{
+    display: flex;
+  }
+
+  .header{
+    .btn{
+      margin-right: 30px;
+    }
+  }
+  
+  .promo__burger{
+    padding-top: 8%;
+  }
+
+  .promo__text{
+    text-align: center;
+    padding: 4% 0 0 0;
+  }
+
+  .promo__desc{
+    width: 60%;
+  }
+
+  .home__arrow{
+    bottom: 4%;
+    left: 48%;
+  }
 }
 
 @media (max-width: 480px){
@@ -112,5 +140,29 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .burger{
+    max-width: 333px;
+    max-height: 339px;
+    margin-bottom: 10%;
+  }
+
+  .promo__title{
+    margin-bottom: 0;
+  }
+
+  .promo__desc{
+    font-size: 3.375rem;
+    width: 75%;
+  }
+
+  .home__arrow{
+    bottom: 3%;
+    left: 46%;
+  } 
+
+  .burger-menu{
+    margin-right: 5%;
   }
 }
