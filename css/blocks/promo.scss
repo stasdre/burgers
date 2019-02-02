@@ -1,31 +1,36 @@
 .promo{
+  flex: 0.7;
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 
-.promo__text{
+.promo__img{
+  overflow: hidden;
+  padding-left: 1.1875rem;
+}
+
+.promo__img, .promo__content{
   flex-basis: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
-.promo__burger{
-  padding-left: 1%;
+.promo__pic{
+  display: block;
+  max-width: 100%
+}
+
+.promo__content{
+  padding-left: 0.9375rem;
+  padding-top: 9%;
 }
 
 .promo__text{
-  padding: 6% 0 0 2%;
-}
-
-.promo__desc{
-  color: $white;
   font-family: Lifehack;
   font-size: 4.0625rem;
+  color: $white;
   line-height: 3.75rem;
+  letter-spacing: -0.101875rem;
 }
 
 .promo__title{
-  margin-bottom: 12px;
+  margin-bottom: 1.6875rem;
 }

@@ -1,15 +1,12 @@
 .title{
   font-family: Gagalin;
   font-size: 4.5rem;
-  line-height: 85px;
-}
-
-.title_center{
-  text-align: center;
-}
-
-.title_yellow{
+  line-height: 4rem;
   color: $yellow_orange;
+}
+
+.title_black{
+  color: $shark;
 }
 
 .title_white{

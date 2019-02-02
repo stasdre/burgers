@@ -6,10 +6,13 @@
 
 .header__col{
   display: flex;
-  justify-content: flex-end;
   align-items: center;
 }
 
 .header__nav{
   margin-right: 15px;
+}
+
+.header__burger-nav{
+  margin-left: 1.875rem;
 }

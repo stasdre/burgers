@@ -2,26 +2,32 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
+  align-items: center;
 }
 
 .nav__item{
-  &:after{
-    content: "•";
-    display: inline-block;
-    margin: 0 14px;
-    color: $white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &::after{
+    content: "";
+    display: block;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: $white;
+    margin: 0 1rem;
   }
   &:last-child{
-    margin-right: 0;
-    &:after{
+    &::after{
       display: none;
     }
   }
 }
 
 .nav__link{
-  font-size: 13px;
+  color: $white;
+  font-size: 0.8125rem;
   font-weight: 500;
   text-transform: uppercase;
-  color: $white;
 }

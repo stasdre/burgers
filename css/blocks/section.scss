@@ -1,5 +1,47 @@
 .section{
-  width: 100%;
-  height: 100%;
   min-height: 650px;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  overflow: hidden;
+  position: relative;
+}
+
+.section_home{
+  background-image: url('../img/bg/home-bg.jpg');
+}
+
+.section_we{
+  background-image: url('../img/bg/we-bg.jpg');
+}
+
+.section_gradient{
+  background-color: $yellow_orange;
+  background-image: linear-gradient(to top, $yellow_orange 0%, #eb8c38 48%, $yellow_orange 74%, $yellow_orange 100%);
+}
+
+.section_team{
+  background-image: url('../img/bg/team-bg.jpg');
+}
+
+.section_menu{
+  background-image: url('../img/bg/menu-bg.jpg');
+}
+
+.section_how{
+  background-image: url('../img/bg/how-bg.jpg');
+}
+
+.section_order{
+  background-image: url('../img/bg/order-bg.jpg');
+}
+
+.section_map{
+  background-image: url('../img/bg/map-bg.jpg');
+}
+
+.section__home{
+  padding: 0.75rem 0 2.5rem 0;
+  height: 100%;
 }

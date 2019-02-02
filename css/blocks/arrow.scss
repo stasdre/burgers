@@ -1,5 +1,9 @@
 .arrow{
-  display: block;
+  position: absolute;
+  bottom: 7%;
+  left: 49%;
+  display: flex;
+  justify-content: center;
 }
 
 .arrow__icon{

@@ -1,0 +1,47 @@
+.privilege{
+  width: 100%;
+}
+
+.privilege__list{
+  display: flex;
+  justify-content: space-between;
+}
+
+.privilege__icon{
+  max-width: 97px;
+  max-height: 89px;
+}
+
+.privilege__item{
+  width: 33.3%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.privilege__img{
+  margin-bottom: 1.5625rem;
+}
+
+.privilege__content{
+  text-align: center;
+}
+
+.privilege__title{
+  font-family: Lifehack;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: $shark;
+  margin-bottom: 0.625rem;
+}
+
+.privilege__text{
+  font-size: 0.875rem;
+  line-height: 1.50125rem;
+  color: $shark;
+  opacity: 0.8;
+}
+
+.privilege__head{
+  margin-bottom: 5%;
+}
