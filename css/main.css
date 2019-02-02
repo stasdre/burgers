@@ -110,6 +110,7 @@ table {
 
 .section_home {
   background-image: url("../img/bg/home-bg.jpg");
+  padding-top: 0.75rem;
 }
 
 .section_we {
