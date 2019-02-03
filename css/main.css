@@ -376,7 +376,7 @@ table {
   height: 100%;
   background-color: #2f3234;
   opacity: 0.93;
-  padding: 10% 10% 0 9%;
+  padding: 7.0625rem 6.125rem 0 6.125rem;
 }
 
 .team__title {
@@ -434,7 +434,7 @@ table {
 .team__container {
   display: flex;
   align-items: center;
-  padding: 4% 0 4% 5%;
+  padding: 1rem 0 0.5rem 1rem;
 }
 
 .team__pic {
@@ -873,12 +873,12 @@ table {
 
   .team__item {
     align-items: center;
-    margin-bottom: 4%;
+    margin-bottom: 1.9375rem;
   }
 
   .team__container {
     flex-direction: column;
-    padding: 3% 0 8% 0;
+    padding: 0.9375rem 0 0 0;
   }
 
   .team__pic {
@@ -977,7 +977,7 @@ table {
 
   .promo__content {
     width: 85%;
-    padding-top: 10%;
+    padding-top: 3.25rem;
   }
 
   .promo__title {
@@ -1020,11 +1020,7 @@ table {
   }
 
   .team__item {
-    margin-bottom: 6%;
-  }
-
-  .team__container {
-    padding: 3% 0 4% 0;
+    margin-bottom: 1.9375rem;
   }
 
   .menu-accordion__item_active {
