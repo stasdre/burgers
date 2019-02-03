@@ -10,7 +10,7 @@
 }
 
 .team__title{
-  margin-bottom: 13%;
+  margin-bottom: 2.875rem;
 }
 
 .team__list{
@@ -22,25 +22,24 @@
 .team__item{
   display: flex;
   flex-direction: column;
-  margin-bottom: 9%;
+  margin-bottom: 1.875rem;
   &_active{
     .team__wrap{
-      opacity: 1;
       height: 100%;
     } 
     .team__link{
+      color: $yellow_orange;
       &::before{
-        border-bottom-width: 7px;
-        border-top-width: 0px;
-        border-bottom-color: $yellow_orange;
+        transform: rotate(180deg);
       }
     }   
   }
 }
 
 .team__wrap{
-  opacity: 0;
   height: 0;
+  overflow: hidden;
+  transition: 1s;
 }
 
 
@@ -61,6 +60,7 @@
     width: 0;
     height: 0;
     margin-right: 0.625rem;
+    transition: .3s;
   }
 }
 

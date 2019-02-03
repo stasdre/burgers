@@ -1,7 +1,3 @@
-.contacts{
-  font-size: 0.875rem;
-}
-
 .contacts__address{
   color: $white;
   margin-bottom: 0.3125rem;
@@ -10,7 +6,6 @@
 .contacts__phone{
   display: flex;
   align-items: center;
-  color: $cinnabar;
 }
 
 .contacts__phone-icon{
@@ -21,6 +16,11 @@
 }
 
 .contacts__phone-call{
+  display: flex;
+  align-items: center;
+}
+
+.contacts__phone-number{
   font-size: 0.875rem;
   color: $cinnabar;
 }

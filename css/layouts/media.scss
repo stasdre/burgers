@@ -18,7 +18,7 @@
     width: 60%;
     text-align: center;
     padding-left: 0;
-    padding-top: 9%;
+    padding-top: 2.5rem;
   }
   .promo__img {
     padding-left: 0;
@@ -27,18 +27,24 @@
     bottom: 5%;
   }
   .privilege__head {
-    margin-bottom: 7%;
+    margin-bottom: 3.6875rem;
   }
   .team {
-    width: initial;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0;
     left: 0;
   }
   .team__title {
     text-align: center;
-    margin-bottom: 7%;
+    margin-bottom: 3.0625rem;
   }
   .team__list {
     align-items: center;
+    width: 80%;
   }
   .team__item {
     align-items: center;
@@ -68,7 +74,7 @@
     height: 25%;
   }
 
-  .reviews__content{
+  .reviews__content{ 
     align-items: center;
     text-align: center;
     padding: 0 3.375rem;
@@ -76,11 +82,10 @@
 
   .form__container{
     flex-direction: column;
-    align-items: center;
+    padding: 0 9.375rem;
   }
   .form__col{
     margin-right: 0;
-    width: 66%;
   }
   .header_active{
     .nav{
@@ -123,6 +128,11 @@
       z-index: 2;
     }
   }  
+  .menu-accordion__item_active{
+    .menu-accordion__wrap{
+      width: 529px;
+    }  
+  }
 }
 
 @media (max-width: 480px) {
@@ -140,7 +150,7 @@
     padding-top: 10%;
   }
   .promo__title {
-    font-size: 3.9375rem;
+    font-size: 3.125rem;
   }
   .promo__text {
     font-size: 3.375rem;
@@ -152,6 +162,9 @@
     width: initial;
     flex-direction: row;
     margin-bottom: 2.1875rem;
+    &:last-child{
+      margin-bottom: 0;
+    }
   }
   .privilege__content {
     text-align: left;
@@ -161,11 +174,11 @@
   }
   .privilege__head {
     font-size: 3.125rem;
-    margin-bottom: 5%;
+    margin-bottom: 2.375rem;
   }
   .team__title {
     font-size: 3.125rem;
-    margin-bottom: 5%;
+    margin-bottom: 2rem;
   }
   .team__item {
     margin-bottom: 6%;
@@ -187,10 +200,6 @@
     width: 100%;
   }
 
-  .menu-accordion__contant{
-    padding-top: 15%;
-  }
-
   .reviews__des{
     display: none;
   }
@@ -199,11 +208,13 @@
     font-size: 1.5rem;
   }
   .form__head{
-    font-size: 3.125rem;
+    font-size: 3rem;
     text-align: center;  
+    line-height: 3.2rem;
+    margin-bottom: 2.1875rem;
   }
-  .form__col{
-    width: 100%;
+  .form__container{
+    padding: 0;
   }
   .form__row{
     justify-content: center;
@@ -227,6 +238,17 @@
     padding-bottom: 1.25rem;
   }
   .menu-accordion__close{
+    display: block;
+  }
+  .menu-accordion__item_active{
+    .menu-accordion__wrap{
+      width: 100%;
+    }  
+  }
+  .reviews__btn_x768{
+    display: none;
+  }
+  .reviews__btn_x480{
     display: block;
   }
 }

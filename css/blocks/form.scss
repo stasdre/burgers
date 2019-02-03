@@ -32,6 +32,9 @@
   border: 1px solid $quill_gray;
   border-radius: 5px;
   outline: none;
+  color: $shark;
+  font-weight: 300;
+  padding: 0.6875rem 1.3125rem;
   &:focus{
     border: 2px solid $yellow_orange;
   }
@@ -113,5 +116,5 @@
 }
 
 .form__head{
-  margin-bottom: 2.125rem;
+  margin-bottom: 2.8125rem;
 }
