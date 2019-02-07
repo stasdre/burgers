@@ -23,7 +23,7 @@
   .promo__img {
     padding-left: 0;
   }
-  .arrow {
+  .section__arrow {
     bottom: 5%;
   }
   .privilege__head {
@@ -132,6 +132,46 @@
     .menu-accordion__wrap{
       width: 529px;
     }  
+  }
+
+  .carusel__conainer{
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .carusel__bg, .carusel__desc{
+    width: 100%;
+  }
+
+  .carusel__desc{
+    padding: 0 2.8125rem;
+    text-align: center;
+  }
+
+  .carusel__bg{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.625rem;
+  }
+  
+  .carusel__components{
+    top: 0;
+    left: 5.75rem;
+  }
+
+  .carusel__kkal{
+    top: 0;
+    right: 6rem;
+    bottom: inherit;
+    left: inherit;
+  }
+
+  .carusel__title{
+    font-size: 4.5rem;
+  }
+
+  .carusel__order{
+    justify-content: center;
   }
 }
 
@@ -249,5 +289,41 @@
   }
   .reviews__content{
     padding: 0 1rem;
+  }
+
+  .carusel__conainer{
+    padding-top: 3rem;
+    padding-bottom: 0;
+    height: 90%;
+  }
+
+  .carusel__title{
+    font-size: 3.125rem;
+    line-height: 3.29rem;
+    margin-bottom: 1.5625rem;
+  }
+
+  .carusel__desc{
+    padding: 0;
+  }
+
+  .carusel__text{
+    margin-bottom: 0.3125rem;
+  }
+  .carusel__price{
+    font-size: 1.5rem;
+  }
+
+  .carusel__components{
+    left: -2.1875rem;
+    top: -1.125rem;
+  }
+
+  .carusel__kkal{
+    right: -2.0625rem;
+    top: -1.125rem;
+  }
+  .carusel__price-sum{
+    font-size: 3.125rem;
   }
 }

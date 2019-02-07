@@ -1,0 +1,126 @@
+.carusel {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.carusel__arrow {
+  .arrow__icon {
+    height: 0.8125rem;
+    width: 1.6875rem;
+  }
+}
+
+.carusel__conainer {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 5rem 0;
+}
+
+.carusel__desc {
+  width: 50%;
+  padding: 0 0.625rem;
+}
+
+.carusel__bg {
+  width: 50%;
+  overflow: hidden;
+}
+
+.carusel__components {
+  position: absolute;
+  left: 0.6875rem;
+  top: 1.875rem;
+  width: 90px;
+  height: 90px;
+  background-color: rgba($cinnabar_2, .4);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.carusel__components-pic {
+  width: 2.875rem;
+  height: 2.75rem;
+  margin-bottom: 0.3125rem;
+  fill: $white;
+}
+
+.carusel__components-text{
+  color: $white;
+  font-family: Gagalin;
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+.carusel__img {
+  display: block;
+  max-width: 100%;
+}
+
+.carusel__text {
+  color: $white;
+  font-size: 0.875rem;
+  line-height: 1.498125rem;
+  margin-bottom: 1rem;
+}
+
+.carusel__title {
+  margin-bottom: 2.5rem;
+}
+
+.carusel__price {
+  font-family: Gagalin;
+  font-size: 1.875rem;
+  font-weight: 400;
+  color: $cinnabar_2;
+  letter-spacing: -0.046875rem;
+  margin-right: 1.8125rem;
+}
+
+.carusel__price-sum {
+  font-size: 4.5rem;
+  letter-spacing: -0.111875rem;
+}
+
+.carusel__order {
+  display: flex;
+  align-items: baseline;
+}
+
+.carusel__kkal{
+  position: absolute;
+  left: 0.6875rem;
+  bottom: 1.875rem;
+  opacity: .5;
+  color: $white;
+  font-family: Gagalin; 
+  font-weight: 400; 
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carusel__kkal-bg{
+  width: 3.75rem;
+  height: 3.75rem;
+  background-image: url('../img/kkal.svg');
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0.9375rem;
+  padding-left: 0.125rem;
+}
+
+.carusel__kkal-weight{
+  font-size: 1.25rem;
+}
+
+.carusel__kkal-text{
+  font-size: 0.875rem;
+}

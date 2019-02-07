@@ -1,7 +1,4 @@
 .arrow{
-  position: absolute;
-  bottom: 7%;
-  left: 49%;
   display: flex;
   justify-content: center;
 }
@@ -9,4 +6,16 @@
 .arrow__icon{
   width: 1.8125rem;
   height: 0.875rem;
+}
+
+.arrow_left{
+  .arrow__icon{
+    transform: rotate(90deg);
+  }
+}
+
+.arrow_right{
+  .arrow__icon{
+    transform: rotate(-90deg);
+  }
 }

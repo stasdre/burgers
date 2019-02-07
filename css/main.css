@@ -98,6 +98,10 @@ table {
   align-items: center;
 }
 
+.container_1010 {
+  max-width: 1010px;
+}
+
 .section {
   min-height: 650px;
   height: 100%;
@@ -145,6 +149,12 @@ table {
 .section__home {
   padding: 0.75rem 0 2.5rem 0;
   height: 100%;
+}
+
+.section__arrow {
+  position: absolute;
+  bottom: 7%;
+  left: 49%;
 }
 
 .header {
@@ -292,9 +302,6 @@ table {
 }
 
 .arrow {
-  position: absolute;
-  bottom: 7%;
-  left: 49%;
   display: flex;
   justify-content: center;
 }
@@ -302,6 +309,14 @@ table {
 .arrow__icon {
   width: 1.8125rem;
   height: 0.875rem;
+}
+
+.arrow_left .arrow__icon {
+  transform: rotate(90deg);
+}
+
+.arrow_right .arrow__icon {
+  transform: rotate(-90deg);
 }
 
 .burger-nav {
@@ -813,6 +828,131 @@ table {
   background: url("../img/close.svg") center center no-repeat;
 }
 
+.carusel {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.carusel__arrow .arrow__icon {
+  height: 0.8125rem;
+  width: 1.6875rem;
+}
+
+.carusel__conainer {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 5rem 0;
+}
+
+.carusel__desc {
+  width: 50%;
+  padding: 0 0.625rem;
+}
+
+.carusel__bg {
+  width: 50%;
+  overflow: hidden;
+}
+
+.carusel__components {
+  position: absolute;
+  left: 0.6875rem;
+  top: 1.875rem;
+  width: 90px;
+  height: 90px;
+  background-color: rgba(227, 80, 40, 0.4);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.carusel__components-pic {
+  width: 2.875rem;
+  height: 2.75rem;
+  margin-bottom: 0.3125rem;
+  fill: #ffffff;
+}
+
+.carusel__components-text {
+  color: #ffffff;
+  font-family: Gagalin;
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+.carusel__img {
+  display: block;
+  max-width: 100%;
+}
+
+.carusel__text {
+  color: #ffffff;
+  font-size: 0.875rem;
+  line-height: 1.498125rem;
+  margin-bottom: 1rem;
+}
+
+.carusel__title {
+  margin-bottom: 2.5rem;
+}
+
+.carusel__price {
+  font-family: Gagalin;
+  font-size: 1.875rem;
+  font-weight: 400;
+  color: #e35028;
+  letter-spacing: -0.046875rem;
+  margin-right: 1.8125rem;
+}
+
+.carusel__price-sum {
+  font-size: 4.5rem;
+  letter-spacing: -0.111875rem;
+}
+
+.carusel__order {
+  display: flex;
+  align-items: baseline;
+}
+
+.carusel__kkal {
+  position: absolute;
+  left: 0.6875rem;
+  bottom: 1.875rem;
+  opacity: 0.5;
+  color: #ffffff;
+  font-family: Gagalin;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carusel__kkal-bg {
+  width: 3.75rem;
+  height: 3.75rem;
+  background-image: url("../img/kkal.svg");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0.9375rem;
+  padding-left: 0.125rem;
+}
+
+.carusel__kkal-weight {
+  font-size: 1.25rem;
+}
+
+.carusel__kkal-text {
+  font-size: 0.875rem;
+}
+
 @media (max-width: 768px) {
   .header__nav {
     display: none;
@@ -844,7 +984,7 @@ table {
     padding-left: 0;
   }
 
-  .arrow {
+  .section__arrow {
     bottom: 5%;
   }
 
@@ -961,6 +1101,46 @@ table {
 
   .menu-accordion__item_active .menu-accordion__wrap {
     width: 529px;
+  }
+
+  .carusel__conainer {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .carusel__bg, .carusel__desc {
+    width: 100%;
+  }
+
+  .carusel__desc {
+    padding: 0 2.8125rem;
+    text-align: center;
+  }
+
+  .carusel__bg {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.625rem;
+  }
+
+  .carusel__components {
+    top: 0;
+    left: 5.75rem;
+  }
+
+  .carusel__kkal {
+    top: 0;
+    right: 6rem;
+    bottom: inherit;
+    left: inherit;
+  }
+
+  .carusel__title {
+    font-size: 4.5rem;
+  }
+
+  .carusel__order {
+    justify-content: center;
   }
 }
 @media (max-width: 480px) {
@@ -1098,6 +1278,44 @@ table {
 
   .reviews__content {
     padding: 0 1rem;
+  }
+
+  .carusel__conainer {
+    padding-top: 3rem;
+    padding-bottom: 0;
+    height: 90%;
+  }
+
+  .carusel__title {
+    font-size: 3.125rem;
+    line-height: 3.29rem;
+    margin-bottom: 1.5625rem;
+  }
+
+  .carusel__desc {
+    padding: 0;
+  }
+
+  .carusel__text {
+    margin-bottom: 0.3125rem;
+  }
+
+  .carusel__price {
+    font-size: 1.5rem;
+  }
+
+  .carusel__components {
+    left: -2.1875rem;
+    top: -1.125rem;
+  }
+
+  .carusel__kkal {
+    right: -2.0625rem;
+    top: -1.125rem;
+  }
+
+  .carusel__price-sum {
+    font-size: 3.125rem;
   }
 }
 
