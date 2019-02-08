@@ -64,31 +64,27 @@
   .team__link {
     font-size: 1.5625rem;
   }
-
-  .menu-accordion{
+  .menu-accordion {
     max-width: 100%;
   }
-
-  .reviews__item{
+  .reviews__item {
     flex-basis: 50%;
     height: 25%;
   }
-
-  .reviews__content{ 
+  .reviews__content {
     align-items: center;
     text-align: center;
     padding: 0 3.375rem;
   }
-
-  .form__container{
+  .form__container {
     flex-direction: column;
     padding: 0 9.375rem;
   }
-  .form__col{
+  .form__col {
     margin-right: 0;
   }
-  .header_active{
-    .nav{
+  .header_active {
+    .nav {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -100,87 +96,81 @@
       background-color: rgba($shark, .99);
       margin-right: 0;
       z-index: 1;
-      &__list{
+      &__list {
         flex-direction: column;
       }
-      &__item{
+      &__item {
         flex-direction: column;
-        &::after{
+        &::after {
           margin: 1.25rem 0;
           width: 0.3125rem;
           height: 0.3125rem;
         }
       }
-      &__link{
+      &__link {
         font-size: 1.5rem;
       }
-      &__close{
+      &__close {
         display: block;
         position: fixed;
         top: 2%;
         right: 3%;
       }
     }
-    .logo__icon{
+    .logo__icon {
       position: fixed;
       top: 1%;
       left: 2%;
       z-index: 2;
     }
-  }  
-  .menu-accordion__item_active{
-    .menu-accordion__wrap{
-      width: 529px;
-    }  
   }
-
-  .carusel__conainer{
+  .menu-accordion__item_active {
+    .menu-accordion__wrap {
+      width: 529px;
+    }
+  }
+  .carusel__conainer {
     flex-direction: column;
     justify-content: center;
   }
-
-  .carusel__bg, .carusel__desc{
+  .carusel__bg,
+  .carusel__desc {
     width: 100%;
   }
-
-  .carusel__desc{
+  .carusel__desc {
     padding: 0 2.8125rem;
     text-align: center;
   }
-
-  .carusel__bg{
+  .carusel__bg {
     display: flex;
     justify-content: center;
     margin-bottom: 1.625rem;
   }
-  
-  .carusel__components{
+  .carusel__components {
     top: 0;
     left: 0;
   }
-
-  .carusel__kkal{
+  .carusel__kkal {
     top: 0;
     right: 0;
     bottom: inherit;
     left: inherit;
   }
-
-  .carusel__title{
+  .carusel__title {
     font-size: 4.5rem;
   }
-
-  .carusel__order{
+  .carusel__order {
     justify-content: center;
   }
-
-  .carusel__slider{
+  .carusel__slider {
     max-width: 570px;
     width: 95%;
   }
-
-  .carusel__item{
+  .carusel__item {
     width: 570px;
+  }
+  .product {
+    min-width: 321px;
   }
 }
 
@@ -211,7 +201,7 @@
     width: initial;
     flex-direction: row;
     margin-bottom: 2.1875rem;
-    &:last-child{
+    &:last-child {
       margin-bottom: 0;
     }
   }
@@ -232,7 +222,7 @@
   .team__item {
     margin-bottom: 1.9375rem;
   }
-  .menu-accordion__item_active{
+  .menu-accordion__item_active {
     position: absolute;
     top: 0;
     left: 0;
@@ -240,133 +230,134 @@
     height: 100%;
     z-index: 1;
   }
-
-  .menu-accordion{
+  .menu-accordion {
     width: 100%;
   }
-
-  .reviews__des{
+  .reviews__des {
     display: none;
   }
-
-  .reviews__subtitle{
+  .reviews__subtitle {
     font-size: 1.5rem;
   }
-  .form__head{
+  .form__head {
     font-size: 3rem;
-    text-align: center;  
+    text-align: center;
     line-height: 3.2rem;
     margin-bottom: 2.1875rem;
   }
-  .form__container{
+  .form__container {
     padding: 0;
   }
-  .form__row{
+  .form__row {
     justify-content: center;
   }
-  .form__group_x-480{
+  .form__group_x-480 {
     //display: none;
   }
-  .footer__container{
+  .footer__container {
     flex-direction: column;
   }
-  .contacts{
+  .contacts {
     text-align: center;
   }
-  .contacts__phone{
+  .contacts__phone {
     justify-content: center;
   }
-  .footer{
+  .footer {
     padding: 1.25rem 0;
   }
-  .contacts{
+  .contacts {
     padding-bottom: 1.25rem;
   }
-  .menu-accordion__close{
+  .menu-accordion__close {
     display: block;
   }
-  .menu-accordion__item_active{
-    .menu-accordion__wrap{
+  .menu-accordion__item_active {
+    .menu-accordion__wrap {
       width: 100%;
-    }  
+    }
   }
-  .reviews__btn_x768{
+  .reviews__btn_x768 {
     display: none;
   }
-  .reviews__btn_x480{
+  .reviews__btn_x480 {
     display: block;
   }
-  .reviews__content{
+  .reviews__content {
     padding: 0 1rem;
   }
-
-  .carusel__conainer{
+  .carusel__conainer {
     padding-top: 1rem;
     padding-bottom: 0;
     height: 90%;
   }
-
-  .carusel__title{
+  .carusel__title {
     font-size: 3.125rem;
     line-height: 3.29rem;
     margin-bottom: 1rem;
   }
-
-  .carusel__desc{
+  .carusel__desc {
     padding: 0;
   }
-
-  .carusel__text{
+  .carusel__text {
     margin-bottom: 0.3125rem;
   }
-  .carusel__price{
+  .carusel__price {
     font-size: 1.5rem;
   }
-
-  .carusel__components{
+  .carusel__components {
     // left: -2.1875rem;
     // top: -1.125rem;
     left: 0;
     top: 0.2rem;
   }
-
-  .carusel__kkal{
+  .carusel__kkal {
     // right: -2.0625rem;
     // top: -1.125rem;
     right: 0;
     top: 0.2rem;
     left: initial;
-    bottom: initial;
-    //right: 0;
+    bottom: initial; //right: 0;
   }
-  .carusel__price-sum{
+  .carusel__price-sum {
     font-size: 3.125rem;
   }
-  .carusel__bg{
+  .carusel__bg {
     align-items: center;
   }
-
-  .carusel__slider{
+  .carusel__slider {
     max-width: 325px;
     width: 95%;
     align-self: stretch;
   }
-
-  .carusel__item{
+  .carusel__item {
     width: 325px;
   }
-  .carusel__item{
+  .carusel__item {
     display: flex;
     align-items: center;
   }
-  .carusel__components{
+  .carusel__components {
     width: 70px;
     height: 70px;
+    &:active {
+      .carusel__products {
+        left: 70px;
+      }
+    }
+    &:hover{
+      .carusel__products{
+        left: 70px;
+      }
+    }  
   }
-  .carusel__controll{
+  .carusel__controll {
     //position: absolute;
   }
-  .carusel__bg{
+  .carusel__bg {
     margin-bottom: 1rem;
+  }
+  .product{
+    min-width: 255px;
   }
 }

@@ -41,6 +41,18 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  &:hover{
+    .carusel__products{
+      left: 90px;
+      opacity: 1;
+    }
+  }
+  &:active{
+    .carusel__products{
+      left: 90px;
+      opacity: 1;
+    }
+  }
 }
 
 .carusel__components-pic {
@@ -142,4 +154,12 @@
 .carusel__item{
   position: relative;
   width: 940px;
+}
+
+.carusel__products{
+  position: absolute;
+  top: 0;
+  left: -99999px;
+  opacity: 0;
+  transition: opacity .5s;
 }

@@ -1,0 +1,41 @@
+.product{
+  background-color: rgba($white, .9);
+  border-radius: 5px;
+  padding: 1.125rem 1.25rem;
+  min-width: 270px;
+}
+
+.product__list{
+  display: flex;
+  flex-direction: column;
+}
+
+.product__item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.4375rem;
+}
+
+.product__desc{
+  font-size: 0.875rem;
+  color: $shark;
+  display: flex;
+  align-items: center;
+}
+
+.product_name{
+  font-weight: 500;
+}
+
+.product__img{
+  max-width: 3rem;
+  max-height: 2.6875rem;
+  margin-right: 1.5625rem;
+}
+
+.product__close{
+  .close__icon{
+    fill: $cinnabar_2;
+  }
+}
