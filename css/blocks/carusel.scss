@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   height: 100%;
+  position: relative;
 }
 
 .carusel__arrow {
@@ -12,7 +13,6 @@
 }
 
 .carusel__conainer {
-  position: relative;
   flex: 1;
   display: flex;
   align-items: center;
@@ -123,4 +123,23 @@
 
 .carusel__kkal-text{
   font-size: 0.875rem;
+}
+
+.carusel__slider{
+  display: flex;
+  max-width: 940px;
+  width: 95%;
+  overflow: hidden;
+}
+
+.carusel__list{
+  display: flex;
+  position: relative;
+  transition: right .3s;
+  right: 0;
+}
+
+.carusel__item{
+  position: relative;
+  width: 940px;
 }

@@ -832,6 +832,7 @@ table {
   display: flex;
   align-items: center;
   height: 100%;
+  position: relative;
 }
 
 .carusel__arrow .arrow__icon {
@@ -840,7 +841,6 @@ table {
 }
 
 .carusel__conainer {
-  position: relative;
   flex: 1;
   display: flex;
   align-items: center;
@@ -951,6 +951,25 @@ table {
 
 .carusel__kkal-text {
   font-size: 0.875rem;
+}
+
+.carusel__slider {
+  display: flex;
+  max-width: 940px;
+  width: 95%;
+  overflow: hidden;
+}
+
+.carusel__list {
+  display: flex;
+  position: relative;
+  transition: right 0.3s;
+  right: 0;
+}
+
+.carusel__item {
+  position: relative;
+  width: 940px;
 }
 
 @media (max-width: 768px) {
@@ -1125,12 +1144,12 @@ table {
 
   .carusel__components {
     top: 0;
-    left: 5.75rem;
+    left: 0;
   }
 
   .carusel__kkal {
     top: 0;
-    right: 6rem;
+    right: 0;
     bottom: inherit;
     left: inherit;
   }
@@ -1141,6 +1160,15 @@ table {
 
   .carusel__order {
     justify-content: center;
+  }
+
+  .carusel__slider {
+    max-width: 570px;
+    width: 95%;
+  }
+
+  .carusel__item {
+    width: 570px;
   }
 }
 @media (max-width: 480px) {
@@ -1281,7 +1309,7 @@ table {
   }
 
   .carusel__conainer {
-    padding-top: 3rem;
+    padding-top: 1rem;
     padding-bottom: 0;
     height: 90%;
   }
@@ -1305,17 +1333,43 @@ table {
   }
 
   .carusel__components {
-    left: -2.1875rem;
-    top: -1.125rem;
+    left: 0;
+    top: 0.2rem;
   }
 
   .carusel__kkal {
-    right: -2.0625rem;
-    top: -1.125rem;
+    right: 0;
+    top: 0.2rem;
+    left: initial;
+    bottom: initial;
   }
 
   .carusel__price-sum {
     font-size: 3.125rem;
+  }
+
+  .carusel__bg {
+    align-items: center;
+  }
+
+  .carusel__slider {
+    max-width: 325px;
+    width: 95%;
+    align-self: stretch;
+  }
+
+  .carusel__item {
+    width: 325px;
+  }
+
+  .carusel__item {
+    display: flex;
+    align-items: center;
+  }
+
+  .carusel__components {
+    width: 70px;
+    height: 70px;
   }
 }
 
