@@ -1317,7 +1317,7 @@ table {
   .carusel__title {
     font-size: 3.125rem;
     line-height: 3.29rem;
-    margin-bottom: 1.5625rem;
+    margin-bottom: 1rem;
   }
 
   .carusel__desc {
@@ -1370,6 +1370,10 @@ table {
   .carusel__components {
     width: 70px;
     height: 70px;
+  }
+
+  .carusel__bg {
+    margin-bottom: 1rem;
   }
 }
 
