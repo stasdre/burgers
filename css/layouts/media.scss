@@ -126,7 +126,7 @@
   }
   .menu-accordion__item_active {
     .menu-accordion__wrap {
-      width: 529px;
+      //width: 529px;
     }
   }
   .carusel__conainer {
@@ -226,12 +226,15 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    //width: 100%;
     height: 100%;
     z-index: 1;
   }
   .menu-accordion {
     width: 100%;
+  }
+  .menu-accordion__wrap{
+    transition: none;
   }
   .reviews__des {
     display: none;

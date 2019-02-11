@@ -61,18 +61,21 @@
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  width: 100%;
+  align-items: center;
 }
 
 .menu-accordion__wrap{
   opacity: 0;
   width: 0;
   background-color: rgba($shark, .93);
+  transition: width .5s;
 }
 
 .menu-accordion__item_active{
   .menu-accordion__wrap{
     opacity: 1;
-    width: 540px;
+    //width: 540px;
   }
   .menu-accordion__link{
     color: $yellow_orange;

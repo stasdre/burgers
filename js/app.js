@@ -36,6 +36,52 @@ for(const item of teamItems){
       wrap.style.height = `${height}px`;
       curItem.classList.add('team__item_active');  
     }
-    //console.log(height);
+  });
+}
+
+const menuItems = document.querySelectorAll('.menu-accordion__item');
+
+for(const item of menuItems){
+  
+  item.addEventListener('click', e => {
+    e.preventDefault();
+
+    if(e.target.className != 'menu-accordion__link'){
+      return;
+    }
+
+    const curItem = e.currentTarget;
+    const wrap = curItem.querySelector('.menu-accordion__wrap');
+    const closeLink = wrap.querySelector('.menu-accordion__close');
+    let width = 0;
+
+    if(window.innerWidth <= 480){
+      width = 100+'%';
+    }else if(window.innerWidth <= 768){
+      width = 529+'px';
+    }else{
+      width = 540+'px';
+    }
+
+    if(curItem.classList.contains('menu-accordion__item_active')){
+      wrap.style.width = 0;
+      curItem.classList.remove('menu-accordion__item_active');  
+    }else{
+
+      menuItems.forEach(element => {
+        element.classList.remove('menu-accordion__item_active');
+        element.querySelector('.menu-accordion__wrap').style.width = 0;
+      });
+
+      wrap.style.width = width;
+      curItem.classList.add('menu-accordion__item_active');  
+    }
+
+
+    closeLink.addEventListener('click', e => {
+      e.preventDefault();
+      wrap.style.width = 0;
+      curItem.classList.remove('menu-accordion__item_active');        
+    })
   });
 }
