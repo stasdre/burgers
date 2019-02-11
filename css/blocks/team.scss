@@ -24,9 +24,9 @@
   flex-direction: column;
   margin-bottom: 1.875rem;
   &_active{
-    .team__wrap{
-      height: 100%;
-    } 
+    // .team__wrap{
+    //   height: 100%;
+    // } 
     .team__link{
       color: $yellow_orange;
       &::before{
@@ -39,7 +39,7 @@
 .team__wrap{
   height: 0;
   overflow: hidden;
-  transition: 1s;
+  transition: height .5s;
 }
 
 

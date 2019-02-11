@@ -409,9 +409,6 @@ table {
   flex-direction: column;
   margin-bottom: 1.875rem;
 }
-.team__item_active .team__wrap {
-  height: 100%;
-}
 .team__item_active .team__link {
   color: #f9b43b;
 }
@@ -422,7 +419,7 @@ table {
 .team__wrap {
   height: 0;
   overflow: hidden;
-  transition: 1s;
+  transition: height 0.5s;
 }
 
 .team__link {
