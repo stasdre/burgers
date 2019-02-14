@@ -14,45 +14,71 @@ closeHamburger.addEventListener('click', function(e){
 
 
 const teamItems = document.querySelectorAll('.team__item');
-
 for(const item of teamItems){
   item.addEventListener('click', e => {
-    e.preventDefault();
-    const curItem = e.currentTarget;
-    const wrap = curItem.querySelector('.team__wrap');
-    const textBlock = wrap.firstElementChild;
-    const height = textBlock.getBoundingClientRect().height;
-
-    if(curItem.classList.contains('team__item_active')){
-      wrap.style.height = 0;
-      curItem.classList.remove('team__item_active');  
-    }else{
-
-      teamItems.forEach(element => {
-        element.classList.remove('team__item_active');
-        element.querySelector('.team__wrap').style.height = 0;
-      });
-
-      wrap.style.height = `${height}px`;
-      curItem.classList.add('team__item_active');  
-    }
+    initAccordion(e, teamItems, {
+      type: 'vertical',
+      linkClass: 'team__link',
+      wrapClass: 'team__wrap',
+      activeClass: 'team__item_active'
+    });
   });
 }
 
 const menuItems = document.querySelectorAll('.menu-accordion__item');
-
 for(const item of menuItems){
   
   item.addEventListener('click', e => {
-    e.preventDefault();
+    initAccordion(e, menuItems, {
+      type: 'horizontal',
+      linkClass: 'menu-accordion__link',
+      wrapClass: 'menu-accordion__wrap',
+      activeClass: 'menu-accordion__item_active'
+    });
+  });
+}
 
-    if(e.target.className != 'menu-accordion__link'){
-      return;
+function initAccordion(e, items, options)
+{
+  e.preventDefault();
+
+  if(e.target.className != options.linkClass){
+    return;
+  }
+
+  const curItem = e.currentTarget;
+  const isClosedItem = curItem.classList.contains(options.activeClass);
+
+  if(isClosedItem){
+    closeItems(items, options);
+  }else{
+    closeItems(items, options);
+    openItem(curItem, options);
+  }
+}
+
+function closeItems(items, options)
+{
+  items.forEach(element => {
+    element.classList.remove(options.activeClass);
+    if(options.type == 'vertical'){
+      element.querySelector('.'+options.wrapClass).style.height = 0;
+    }else if(options.type == 'horizontal'){
+      element.querySelector('.'+options.wrapClass).style.width = 0;
     }
+  });
+}
 
-    const curItem = e.currentTarget;
-    const wrap = curItem.querySelector('.menu-accordion__wrap');
-    const closeLink = wrap.querySelector('.menu-accordion__close');
+function openItem(item, options)
+{
+  const wrap = item.querySelector('.'+options.wrapClass);
+
+  if(options.type == 'vertical'){
+    const textBlock = wrap.firstElementChild;
+    const height = textBlock.getBoundingClientRect().height;
+    
+    wrap.style.height = `${height}px`;
+  }else if(options.type == 'horizontal'){
     let width = 0;
 
     if(window.innerWidth <= 480){
@@ -61,27 +87,10 @@ for(const item of menuItems){
       width = 529+'px';
     }else{
       width = 540+'px';
-    }
+    }   
+    
+    wrap.style.width = width;
+  }
 
-    if(curItem.classList.contains('menu-accordion__item_active')){
-      wrap.style.width = 0;
-      curItem.classList.remove('menu-accordion__item_active');  
-    }else{
-
-      menuItems.forEach(element => {
-        element.classList.remove('menu-accordion__item_active');
-        element.querySelector('.menu-accordion__wrap').style.width = 0;
-      });
-
-      wrap.style.width = width;
-      curItem.classList.add('menu-accordion__item_active');  
-    }
-
-
-    closeLink.addEventListener('click', e => {
-      e.preventDefault();
-      wrap.style.width = 0;
-      curItem.classList.remove('menu-accordion__item_active');        
-    })
-  });
+  item.classList.add(options.activeClass);  
 }
