@@ -13,84 +13,86 @@ closeHamburger.addEventListener('click', function(e){
 });
 
 
-const teamItems = document.querySelectorAll('.team__item');
-for(const item of teamItems){
-  item.addEventListener('click', e => {
-    initAccordion(e, teamItems, {
-      type: 'vertical',
-      linkClass: 'team__link',
-      wrapClass: 'team__wrap',
-      activeClass: 'team__item_active'
-    });
-  });
-}
+var teamAcco = new Accordion({
+  type: 'vertical',
+  itemsClass: 'team__item',
+  linkClass: 'team__link',
+  wrapClass: 'team__wrap',
+  activeClass: 'team__item_active'
+}).init();
 
-const menuItems = document.querySelectorAll('.menu-accordion__item');
-for(const item of menuItems){
-  
-  item.addEventListener('click', e => {
-    initAccordion(e, menuItems, {
-      type: 'horizontal',
-      linkClass: 'menu-accordion__link',
-      wrapClass: 'menu-accordion__wrap',
-      activeClass: 'menu-accordion__item_active'
-    });
-  });
-}
+var menuAcco = new Accordion({
+  type: 'horizontal',
+  itemsClass: 'menu-accordion__item',
+  linkClass: 'menu-accordion__link',
+  wrapClass: 'menu-accordion__wrap',
+  activeClass: 'menu-accordion__item_active'
+}).init();
 
-function initAccordion(e, items, options)
-{
-  e.preventDefault();
+function Accordion(options){
+  const items = document.querySelectorAll('.'+options.itemsClass);      
 
-  if(e.target.className != options.linkClass){
-    return;
-  }
+  function create(e){
+    e.preventDefault();
 
-  const curItem = e.currentTarget;
-  const isClosedItem = curItem.classList.contains(options.activeClass);
-
-  if(isClosedItem){
-    closeItems(items, options);
-  }else{
-    closeItems(items, options);
-    openItem(curItem, options);
-  }
-}
-
-function closeItems(items, options)
-{
-  items.forEach(element => {
-    element.classList.remove(options.activeClass);
-    if(options.type == 'vertical'){
-      element.querySelector('.'+options.wrapClass).style.height = 0;
-    }else if(options.type == 'horizontal'){
-      element.querySelector('.'+options.wrapClass).style.width = 0;
+    if(e.target.className != options.linkClass){
+      return;
     }
-  });
-}
-
-function openItem(item, options)
-{
-  const wrap = item.querySelector('.'+options.wrapClass);
-
-  if(options.type == 'vertical'){
-    const textBlock = wrap.firstElementChild;
-    const height = textBlock.getBoundingClientRect().height;
-    
-    wrap.style.height = `${height}px`;
-  }else if(options.type == 'horizontal'){
-    let width = 0;
-
-    if(window.innerWidth <= 480){
-      width = 100+'%';
-    }else if(window.innerWidth <= 768){
-      width = 529+'px';
+  
+    const item = e.currentTarget;
+    const isClosedItem = item.classList.contains(options.activeClass);
+  
+    if(isClosedItem){
+      close();
     }else{
-      width = 540+'px';
-    }   
-    
-    wrap.style.width = width;
+      close();
+      open(item);
+    }
   }
 
-  item.classList.add(options.activeClass);  
+  function close(){
+    items.forEach(element => {
+      element.classList.remove(options.activeClass);
+      if(options.type == 'vertical'){
+        element.querySelector('.'+options.wrapClass).style.height = 0;
+      }else if(options.type == 'horizontal'){
+        element.querySelector('.'+options.wrapClass).style.width = 0;
+      }
+    });      
+  }
+
+  function open(item){
+    const wrap = item.querySelector('.'+options.wrapClass);
+
+    if(options.type == 'vertical'){
+      const textBlock = wrap.firstElementChild;
+      const height = textBlock.getBoundingClientRect().height;
+      
+      wrap.style.height = `${height}px`;
+    }else if(options.type == 'horizontal'){
+      let width = 0;
+  
+      if(window.innerWidth <= 480){
+        width = 100+'%';
+      }else if(window.innerWidth <= 768){
+        width = 529+'px';
+      }else{
+        width = 540+'px';
+      }   
+      
+      wrap.style.width = width;
+    }
+  
+    item.classList.add(options.activeClass);        
+  }
+
+  return {
+    init: function(){
+      for(const item of items){
+        item.addEventListener('click', e => {
+          create(e);
+        });      
+      }
+    }
+  }
 }
