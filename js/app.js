@@ -26,7 +26,8 @@ var menuAcco = new Accordion({
   itemsClass: 'menu-accordion__item',
   linkClass: 'menu-accordion__link',
   wrapClass: 'menu-accordion__wrap',
-  activeClass: 'menu-accordion__item_active'
+  activeClass: 'menu-accordion__item_active',
+  closeClass: 'menu-accordion__close'
 }).init();
 
 function Accordion(options){
@@ -47,6 +48,14 @@ function Accordion(options){
     }else{
       close();
       open(item);
+    }
+
+    if(options.closeClass){
+      const closeItem = item.querySelector('.'+options.closeClass);
+      closeItem.addEventListener('click', e => {
+        e.preventDefault();
+        close();
+      });
     }
   }
 
