@@ -567,17 +567,17 @@
       <section class="section section_order">
         <div class="container container_center">
           <h2 class="title form__head">Закажите доставку</h2>
-          <form class="form" action="">
+          <form class="form" id="order_form">
             <div class="form__container">
               <div class="form__col">
                 <div class="form__row">
                   <label class="form__group">
                     <div class="form__title">Имя</div>
-                    <input type="text" name="name" class="form__input">
+                    <input type="text" name="name" class="form__input" required>
                   </label>
                   <label class="form__group">
                     <div class="form__title">Телефон</div>
-                    <input type="text" name="phone" class="form__input">
+                    <input type="tel" name="phone" class="form__input" required>
                   </label>
                 </div>
                 <div class="form__row">
@@ -609,7 +609,7 @@
                 <div class="form__row">
                   <label class="form__group">
                     <div class="form__title">Комментарий</div>
-                    <textarea class="form__input form__input_text" name="comment"></textarea>
+                    <textarea class="form__input form__input_text" name="comment" required></textarea>
                   </label>
                 </div>
                 <div class="form__row">

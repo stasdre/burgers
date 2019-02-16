@@ -173,3 +173,21 @@ sliderMenu.addEventListener('click', e=>{
   e.preventDefault();
   console.log(e.currentTarget);
 })
+
+const orderForm = document.querySelector('#order_form');
+orderForm.addEventListener('submit', e=>{
+  e.preventDefault();
+  let formData = new FormData(orderForm);
+  formData.append('to', 'mail@mail.com');
+  const xhr = new XMLHttpRequest();
+  xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
+  xhr.send(formData);
+  xhr.addEventListener('load', ()=>{
+    if(xhr.status >= 400){
+      alert('Что-то пошло не так!');
+    }else{
+      const data = JSON.parse(xhr.responseText);
+      alert(data.message);
+    }
+  });  
+});
