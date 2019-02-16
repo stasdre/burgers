@@ -41,18 +41,19 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  &:hover{
-    .carusel__products{
-      left: 90px;
-      opacity: 1;
-    }
-  }
-  &:active{
-    .carusel__products{
-      left: 90px;
-      opacity: 1;
-    }
-  }
+  cursor: pointer;
+  // &:hover{
+  //   .carusel__products{
+  //     left: 90px;
+  //     opacity: 1;
+  //   }
+  // }
+  // &:active{
+  //   .carusel__products{
+  //     left: 90px;
+  //     opacity: 1;
+  //   }
+  // }
 }
 
 .carusel__components-pic {
@@ -147,7 +148,7 @@
 .carusel__list{
   display: flex;
   position: relative;
-  transition: right .3s;
+  transition: right .5s;
   right: 0;
 }
 

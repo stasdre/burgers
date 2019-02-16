@@ -343,16 +343,16 @@
   .carusel__components {
     width: 70px;
     height: 70px;
-    &:active {
-      .carusel__products {
-        left: 70px;
-      }
-    }
-    &:hover{
-      .carusel__products{
-        left: 70px;
-      }
-    }  
+    // &:active {
+    //   .carusel__products {
+    //     left: 70px;
+    //   }
+    // }
+    // &:hover{
+    //   .carusel__products{
+    //     left: 70px;
+    //   }
+    // }  
   }
   .carusel__controll {
     //position: absolute;

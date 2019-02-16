@@ -87,6 +87,69 @@ class Accordion{
   }
 }
 
+class Slider{
+  constructor(container, options){
+    this.container = document.querySelector(container);
+    this.buttonLeft = this.container.querySelector('.arrow_left');
+    this.buttonRight = this.container.querySelector('.arrow_right');
+    this.itemsContainer = this.container.querySelector('.carusel__slider');
+    this.listContainer = this.container.querySelector('.carusel__list');
+    this.items = this.container.querySelectorAll('.carusel__item');
+    this.step = this.itemsContainer.getBoundingClientRect().width;
+    
+    this.position = 0;
+    this.curItem = 0;
+
+
+    window.addEventListener('resize', ()=>{
+      this.step = this.itemsContainer.getBoundingClientRect().width;
+    });
+
+
+    this.buttonLeft.addEventListener('click', e=>{
+      e.preventDefault();
+      this.scroll('left');
+    });
+
+    this.buttonRight.addEventListener('click', e=>{
+      e.preventDefault();
+      this.scroll('right');
+    });
+  }
+
+  scroll(direction){
+    if(direction === 'right'){
+      this.curItem ++;
+      this.changePoition(direction);
+      //this.listContainer.insertBefore(this.listContainer.lastElementChild, this.listContainer.firstElementChild);      
+    }else{
+      this.curItem --;
+      this.changePoition(direction);
+      //this.listContainer.appendChild(this.listContainer.firstElementChild);
+    }
+
+    this.listContainer.style.right = this.position+'px';
+
+  }
+
+  changePoition(direction){
+    if(direction === 'right'){
+      if(this.position > 0){
+        this.position -= this.step;
+      }
+    }else{
+      console.log(this.items.length * this.step);
+      if( this.position < (this.items.length * this.step)-this.step ){
+        this.position += this.step;
+      }
+    }
+  }
+}
+
+let = new Slider('.carusel', {
+
+});
+
 let teamAcco = new Accordion('.team', {
   type: 'vertical',
   itemsClass: 'team__item',
@@ -103,3 +166,10 @@ let menuAcco = new Accordion('.menu-accordion', {
   activeClass: 'menu-accordion__item_active',
   closeClass: 'close'
 });
+
+const sliderMenu = document.querySelector('.carusel__slider');
+
+sliderMenu.addEventListener('click', e=>{
+  e.preventDefault();
+  console.log(e.currentTarget);
+})
