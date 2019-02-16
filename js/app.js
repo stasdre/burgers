@@ -13,72 +13,63 @@ closeHamburger.addEventListener('click', function(e){
 });
 
 
-var teamAcco = new Accordion({
-  type: 'vertical',
-  itemsClass: 'team__item',
-  linkClass: 'team__link',
-  wrapClass: 'team__wrap',
-  activeClass: 'team__item_active'
-}).init();
+class Accordion{
 
-var menuAcco = new Accordion({
-  type: 'horizontal',
-  itemsClass: 'menu-accordion__item',
-  linkClass: 'menu-accordion__link',
-  wrapClass: 'menu-accordion__wrap',
-  activeClass: 'menu-accordion__item_active',
-  closeClass: 'menu-accordion__close'
-}).init();
+  constructor(container, options){
+    this.container = document.querySelector(container);
+    this.options = options;
 
-function Accordion(options){
-  const items = document.querySelectorAll('.'+options.itemsClass);      
+    this.items = this.container.querySelectorAll('.'+this.options.itemsClass);
 
-  function create(e){
-    e.preventDefault();
+    this.container.addEventListener('click', e => {
+      e.preventDefault();
 
-    if(e.target.className != options.linkClass){
-      return;
-    }
-  
-    const item = e.currentTarget;
-    const isClosedItem = item.classList.contains(options.activeClass);
-  
-    if(isClosedItem){
-      close();
-    }else{
-      close();
-      open(item);
-    }
+      if(e.target.classList.contains(this.options.linkClass)){
+        let item;
+        if(e.target.parentElement.classList.contains(this.options.itemsClass)){
+          item = e.target.parentElement;
+        }else{
+          item = e.target.parentElement.parentElement;
+        }
+        
+        if(this.isClosed(item)){
+          this.close();
+        }else{
+          this.close();
+          this.open(item);
+        }
+      }
 
-    if(options.closeClass){
-      const closeItem = item.querySelector('.'+options.closeClass);
-      closeItem.addEventListener('click', e => {
-        e.preventDefault();
-        close();
-      });
-    }
+      if(this.options.closeClass){
+        if(e.target.classList.contains(this.options.closeClass)){
+          this.close();
+        }  
+      }
+    });
   }
 
-  function close(){
-    items.forEach(element => {
-      element.classList.remove(options.activeClass);
-      if(options.type == 'vertical'){
-        element.querySelector('.'+options.wrapClass).style.height = 0;
-      }else if(options.type == 'horizontal'){
-        element.querySelector('.'+options.wrapClass).style.width = 0;
+  isClosed(item){
+    return item.classList.contains(this.options.activeClass);
+  }
+
+  close(){
+    this.items.forEach(element => {
+      element.classList.remove(this.options.activeClass);
+      if(this.options.type == 'vertical'){
+        element.querySelector('.'+this.options.wrapClass).style.height = 0;
+      }else if(this.options.type == 'horizontal'){
+        element.querySelector('.'+this.options.wrapClass).style.width = 0;
       }
     });      
   }
 
-  function open(item){
-    const wrap = item.querySelector('.'+options.wrapClass);
-
-    if(options.type == 'vertical'){
+  open(item){
+    const wrap = item.querySelector('.'+this.options.wrapClass);
+    if(this.options.type == 'vertical'){
       const textBlock = wrap.firstElementChild;
-      const height = textBlock.getBoundingClientRect().height;
-      
+      const height = textBlock.getBoundingClientRect().height;      
       wrap.style.height = `${height}px`;
-    }else if(options.type == 'horizontal'){
+    }else if(this.options.type == 'horizontal'){
       let width = 0;
   
       if(window.innerWidth <= 480){
@@ -92,16 +83,23 @@ function Accordion(options){
       wrap.style.width = width;
     }
   
-    item.classList.add(options.activeClass);        
-  }
-
-  return {
-    init: function(){
-      for(const item of items){
-        item.addEventListener('click', e => {
-          create(e);
-        });      
-      }
-    }
+    item.classList.add(this.options.activeClass);        
   }
 }
+
+let teamAcco = new Accordion('.team', {
+  type: 'vertical',
+  itemsClass: 'team__item',
+  linkClass: 'team__link',
+  wrapClass: 'team__wrap',
+  activeClass: 'team__item_active'
+});
+
+let menuAcco = new Accordion('.menu-accordion', {
+  type: 'horizontal',
+  itemsClass: 'menu-accordion__item',
+  linkClass: 'menu-accordion__link',
+  wrapClass: 'menu-accordion__wrap',
+  activeClass: 'menu-accordion__item_active',
+  closeClass: 'close'
+});
