@@ -171,6 +171,10 @@
   }
   .product {
     min-width: 321px;
+    padding-right: 3.4375rem;
+  }
+  .product__close{
+    display: block;
   }
 }
 
@@ -362,5 +366,9 @@
   }
   .product{
     min-width: 255px;
+    position: absolute;
+    padding-right: 1.875rem;
+    left: -19px;
+    top: 0;    
   }
 }

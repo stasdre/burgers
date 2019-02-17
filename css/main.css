@@ -987,8 +987,13 @@ table {
   opacity: 0;
   transition: opacity 0.5s;
 }
+.carusel__products.carusel__products_open {
+  left: 90px;
+  opacity: 1;
+}
 
 .product {
+  position: relative;
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 5px;
   padding: 1.125rem 1.25rem;
@@ -1024,8 +1029,11 @@ table {
   margin-right: 1.5625rem;
 }
 
-.product__close .close__icon {
-  fill: #e35028;
+.product__close {
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
 
 .modal {
@@ -1296,6 +1304,11 @@ table {
 
   .product {
     min-width: 321px;
+    padding-right: 3.4375rem;
+  }
+
+  .product__close {
+    display: block;
   }
 }
 @media (max-width: 480px) {
@@ -1508,6 +1521,10 @@ table {
 
   .product {
     min-width: 255px;
+    position: absolute;
+    padding-right: 1.875rem;
+    left: -19px;
+    top: 0;
   }
 }
 

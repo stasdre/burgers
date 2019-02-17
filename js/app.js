@@ -1,3 +1,4 @@
+////-----hamburger menu----/////
 const header = document.querySelector('.header');
 const menu = document.querySelector('#hamburger-menu');
 const closeHamburger = document.querySelector('#hamburger-close');
@@ -12,7 +13,7 @@ closeHamburger.addEventListener('click', function(e){
   header.classList.remove('header_active');
 });
 
-
+////-----Accordion----/////
 class Accordion{
 
   constructor(container, options){
@@ -86,7 +87,24 @@ class Accordion{
     item.classList.add(this.options.activeClass);        
   }
 }
+let teamAcco = new Accordion('.team', {
+  type: 'vertical',
+  itemsClass: 'team__item',
+  linkClass: 'team__link',
+  wrapClass: 'team__wrap',
+  activeClass: 'team__item_active'
+});
 
+let menuAcco = new Accordion('.menu-accordion', {
+  type: 'horizontal',
+  itemsClass: 'menu-accordion__item',
+  linkClass: 'menu-accordion__link',
+  wrapClass: 'menu-accordion__wrap',
+  activeClass: 'menu-accordion__item_active',
+  closeClass: 'close'
+});
+
+////-----Slider----/////
 class Slider{
   constructor(container, options){
     this.container = document.querySelector(container);
@@ -95,6 +113,7 @@ class Slider{
     this.itemsContainer = this.container.querySelector('.carusel__slider');
     this.listContainer = this.container.querySelector('.carusel__list');
     this.items = this.container.querySelectorAll('.carusel__item');
+    this.components = this.container.querySelectorAll('.carusel__components');
     this.step = this.itemsContainer.getBoundingClientRect().width;
     
     this.position = 0;
@@ -115,6 +134,30 @@ class Slider{
       e.preventDefault();
       this.scroll('right');
     });
+
+    this.components.forEach(component=>{
+      const product = component.querySelector('.carusel__products');
+      const closeIcon = product.querySelector('.product__close');
+
+      component.addEventListener('click', e=>{
+        if(e.target.classList.contains('.carusel__components')){
+          product.classList.add('carusel__products_open');
+        }
+      });  
+
+      component.addEventListener('mouseover', ()=>{
+        product.classList.add('carusel__products_open');
+      });  
+
+      component.addEventListener('mouseout', ()=>{
+        product.classList.remove('carusel__products_open');
+      });  
+
+      closeIcon.addEventListener('click', ()=>{
+        product.classList.remove('carusel__products_open');
+      });
+    });
+
   }
 
   scroll(direction){
@@ -122,6 +165,9 @@ class Slider{
       this.curItem ++;
       this.changePoition(direction);
       //this.listContainer.insertBefore(this.listContainer.lastElementChild, this.listContainer.firstElementChild);      
+      // setInterval(()=>{
+      //   console.log(this.position);
+      // },1000);
     }else{
       this.curItem --;
       this.changePoition(direction);
@@ -138,14 +184,15 @@ class Slider{
         this.position -= this.step;
       }
     }else{
-      console.log(this.items.length * this.step);
       if( this.position < (this.items.length * this.step)-this.step ){
         this.position += this.step;
       }
     }
   }
 }
+let = new Slider('.carusel', {});
 
+////-----Modal----/////
 class Modal{
   constructor(container, options){
     this.modal = document.querySelector(container);
@@ -206,34 +253,7 @@ class Modal{
   }
 }
 
-let = new Slider('.carusel', {
-
-});
-
-let teamAcco = new Accordion('.team', {
-  type: 'vertical',
-  itemsClass: 'team__item',
-  linkClass: 'team__link',
-  wrapClass: 'team__wrap',
-  activeClass: 'team__item_active'
-});
-
-let menuAcco = new Accordion('.menu-accordion', {
-  type: 'horizontal',
-  itemsClass: 'menu-accordion__item',
-  linkClass: 'menu-accordion__link',
-  wrapClass: 'menu-accordion__wrap',
-  activeClass: 'menu-accordion__item_active',
-  closeClass: 'close'
-});
-
-const sliderMenu = document.querySelector('.carusel__slider');
-
-sliderMenu.addEventListener('click', e=>{
-  e.preventDefault();
-  console.log(e.currentTarget);
-})
-
+////-----Form----/////
 const orderForm = document.querySelector('#order_form');
 var formModal = new Modal('.modal', {
   type: 'message'
@@ -256,6 +276,7 @@ orderForm.addEventListener('submit', e=>{
   });  
 });
 
+////-----Reviews----/////
 const revList = document.querySelector('.reviews__list');
 var revModal = new Modal('.modal', {
   type: 'content'
