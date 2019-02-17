@@ -146,6 +146,66 @@ class Slider{
   }
 }
 
+class Modal{
+  constructor(container, options){
+    this.modal = document.querySelector(container);
+    this.modalTitle = this.modal.querySelector('.modal__subtitle');
+    this.modalContent = this.modal.querySelector('.modal__text');
+    this.modalCloseButton = this.modal.querySelector('.modal__close-button .btn');
+    this.modalCloseIcon = this.modal.querySelector('.modal__close');
+    this.options = options;
+
+    this.modal.addEventListener('click', e=>{
+      if(e.target == this.modal){
+        this.close();
+      }
+    });
+
+    this.modalCloseButton.addEventListener('click', e=>{
+      this.close();
+    });
+
+    this.modalCloseIcon.addEventListener('click', e=>{
+      this.close();
+    });
+  }
+
+  setTitle(title){
+    this.modalTitle.textContent = title;
+  }
+
+  setContent(text){
+    this.modalContent.textContent = text;
+  }
+
+  open(){
+    if(this.isMessage()){
+      this.modal.classList.add('modal_message');
+    }else{
+      this.modal.classList.remove('modal_message');
+    }
+    this.modal.classList.add('modal_active');
+  }
+
+  close(){
+    this.modal.classList.remove('modal_active');
+    this.clear();
+  }
+
+  isMessage(){
+    if(this.options.type == 'message'){
+      return true;      
+    }else{
+      return false;
+    }
+  }
+
+  clear(){
+    this.modalTitle.textContent = '';
+    this.modalTitle.textContent = '';
+  }
+}
+
 let = new Slider('.carusel', {
 
 });
@@ -175,6 +235,9 @@ sliderMenu.addEventListener('click', e=>{
 })
 
 const orderForm = document.querySelector('#order_form');
+var formModal = new Modal('.modal', {
+  type: 'message'
+});
 orderForm.addEventListener('submit', e=>{
   e.preventDefault();
   let formData = new FormData(orderForm);
@@ -184,10 +247,11 @@ orderForm.addEventListener('submit', e=>{
   xhr.send(formData);
   xhr.addEventListener('load', ()=>{
     if(xhr.status >= 400){
-      alert('Что-то пошло не так!');
+      formModal.setContent('Что-то пошло не так!');
     }else{
       const data = JSON.parse(xhr.responseText);
-      alert(data.message);
+      formModal.setContent(data.message);
     }
+    formModal.open();
   });  
 });
