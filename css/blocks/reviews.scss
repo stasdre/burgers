@@ -14,7 +14,7 @@
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  &:hover::before{
+  &:hover::before, &:active::before{
     content: "";
     display: block;
     position: absolute;
@@ -24,7 +24,7 @@
     height: 100%;
     background-color: rgba(20, 20, 20, 0.7);
   }
-  &:hover > .reviews__content{
+  &:hover > .reviews__content, &:active > .reviews__content{
     opacity: 1;
     transition: 1s;
   }
@@ -60,5 +60,9 @@
 }
 
 .reviews__btn_x480{
+  display: none;
+}
+
+.reviews__modal{
   display: none;
 }

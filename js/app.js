@@ -255,3 +255,18 @@ orderForm.addEventListener('submit', e=>{
     formModal.open();
   });  
 });
+
+const revList = document.querySelector('.reviews__list');
+var revModal = new Modal('.modal', {
+  type: 'content'
+});
+revList.addEventListener('click', e=>{
+  e.preventDefault();
+  if(e.target.classList.contains('btn')){
+    let textContent = e.target.parentElement.parentElement.querySelector('.reviews__modal').textContent;
+    let textTitle = e.target.parentElement.parentElement.querySelector('.reviews__subtitle').textContent;
+    revModal.setTitle(textTitle);
+    revModal.setContent(textContent);
+    revModal.open();
+  }
+});

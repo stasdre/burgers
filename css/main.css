@@ -582,7 +582,7 @@ table {
   background-position: center center;
   background-repeat: no-repeat;
 }
-.reviews__item:hover::before {
+.reviews__item:hover::before, .reviews__item:active::before {
   content: "";
   display: block;
   position: absolute;
@@ -592,7 +592,7 @@ table {
   height: 100%;
   background-color: rgba(20, 20, 20, 0.7);
 }
-.reviews__item:hover > .reviews__content {
+.reviews__item:hover > .reviews__content, .reviews__item:active > .reviews__content {
   opacity: 1;
   transition: 1s;
 }
@@ -627,6 +627,10 @@ table {
 }
 
 .reviews__btn_x480 {
+  display: none;
+}
+
+.reviews__modal {
   display: none;
 }
 
@@ -1085,6 +1089,7 @@ table {
   position: absolute;
   right: 1.25rem;
   top: 1.25rem;
+  cursor: pointer;
 }
 
 .modal__close-button {
