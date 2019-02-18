@@ -249,7 +249,7 @@ class Modal{
 
   clear(){
     this.modalTitle.textContent = '';
-    this.modalTitle.textContent = '';
+    this.modalContent.textContent = '';
   }
 }
 
