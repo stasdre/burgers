@@ -271,6 +271,7 @@ orderForm.addEventListener('submit', e=>{
     }else{
       const data = JSON.parse(xhr.responseText);
       formModal.setContent(data.message);
+      orderForm.reset();
     }
     formModal.open();
   });  
