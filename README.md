@@ -6,4 +6,4 @@
 
 **Наставник**: Александр Несвит
 
-**Ссылка на проект**: https://stasdre.github.io/burgers/
+**Ссылка на проект**: https://stasdre.github.io/burgers/dist/
