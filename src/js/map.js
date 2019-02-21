@@ -31,7 +31,7 @@ function initMap() {
 
 function setMarkers(map) {
   var image = {
-    url: '../img/map-marker.svg',
+    url: './img/map-marker.svg',
     size: new google.maps.Size(46, 57),
   };
   for (var i = 0; i < marcers.length; i++) {
