@@ -58,7 +58,7 @@ task("sass", () => {
       browsers: ['last 2 versions'],
       cascade: false
     })))
-    .pipe(gulpif(env === 'prod', gcmq()))
+    .pipe(gcmq())
     .pipe(gulpif(env === 'prod', cleanCSS()))
     .pipe(gulpif(env === 'dev', sourcemaps.write()))
     .pipe(dest(`${DIST_PATH}/css`))
@@ -92,7 +92,7 @@ task('watch', () => {
   watch(`${SRC_PATH}/**/*.html`, series("copy:html"));
   watch(`${SRC_PATH}/js/**/*.js`, series("js"));
   watch(`${SRC_PATH}/fonts/*.*`, series("copy:fonts"));
-  watch(`${SRC_PATH}/js/**/*.*`, series("copy:img"));
+  watch(`${SRC_PATH}/img/**/*.*`, series("copy:img"));
 });
 
 task(
