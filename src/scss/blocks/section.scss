@@ -38,10 +38,6 @@
   background-image: url('../img/bg/order-bg.jpg');
 }
 
-.section_map{
-  background-image: url('../img/bg/map-bg.jpg');
-}
-
 .section__home{
   padding: 0.75rem 0 2.5rem 0;
   height: 100%;
@@ -51,4 +47,11 @@
   position: absolute;
   bottom: 7%;
   left: 49%;
+}
+
+.section-map{
+  min-height: 650px;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
 }
