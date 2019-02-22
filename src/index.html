@@ -14,7 +14,7 @@
 <body>
   <div class="wrap">
     <div class="maincontent">
-      <section class="section section_home">
+      <section id="home" class="section section_home active">
         <div class="container">
           <!--add 'header_active' class for mobile menu activate-->
           <header class="header">
@@ -28,19 +28,19 @@
             <div class="header__col">
               <nav class="nav header__nav">
                 <ul class="nav__list">
-                  <li class="nav__item"><a href="#" class="nav__link">О нас</a></li>
-                  <li class="nav__item"><a href="#" class="nav__link">Бургеры</a></li>
-                  <li class="nav__item"><a href="#" class="nav__link">Команда</a></li>
-                  <li class="nav__item"><a href="#" class="nav__link">Меню</a></li>
-                  <li class="nav__item"><a href="#" class="nav__link">Отзывы</a></li>
-                  <li class="nav__item"><a href="#" class="nav__link">как мы работаем</a></li>
-                  <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
+                  <li class="nav__item"><a href="#about" class="nav__link scroll-to">О нас</a></li>
+                  <li class="nav__item"><a href="#burgers" class="nav__link scroll-to">Бургеры</a></li>
+                  <li class="nav__item"><a href="#team" class="nav__link scroll-to">Команда</a></li>
+                  <li class="nav__item"><a href="#menu" class="nav__link scroll-to">Меню</a></li>
+                  <li class="nav__item"><a href="#reviews" class="nav__link scroll-to">Отзывы</a></li>
+                  <li class="nav__item"><a href="#how" class="nav__link scroll-to">как мы работаем</a></li>
+                  <li class="nav__item"><a href="#contacts" class="nav__link scroll-to">Контакты</a></li>
                 </ul>
                 <div class="nav__close">
                   <a href="#" class="close" id="hamburger-close"></a>
                 </div>
               </nav>
-              <a href="#" class="btn">Заказать</a>
+              <a href="#order" class="btn scroll-to">Заказать</a>
               <a href="#" class="burger-nav header__burger-nav" id="hamburger-menu">
                 <div class="burger-nav__item"></div>
                 <div class="burger-nav__item"></div>
@@ -60,7 +60,7 @@
         </div>
         <div class="section__arrow">
           <div class="arrow">
-            <a href="#" class="arrow__link">
+            <a href="#about" class="arrow__link scroll-to">
               <svg class="arrow__icon">
                 <use xlink:href="./img/sprite.svg#arrow-scroll"></use>
               </svg>
@@ -68,7 +68,7 @@
           </div>
         </div>
       </section>
-      <section class="section section_we">
+      <section id="about" class="section section_we">
         <div class="container container_center">
           <h2 class="title title_black privilege__head">Мы лучшие</h2>
           <div class="privilege">
@@ -113,7 +113,7 @@
           </div>
         </div>
       </section>
-      <section class="section section_gradient">
+      <section id="burgers" class="section section_gradient">
         <div class="container container_1010 container_center">
           <div class="carusel">
             <div class="carusel__controll">
@@ -511,7 +511,7 @@
           </div>
         </div>
       </section>
-      <section class="section section_team">
+      <section id="team" class="section section_team">
         <div class="team">
           <h2 class="title team__title">команда</h2>
           <ul class="team__list">
@@ -566,7 +566,7 @@
           </ul>
         </div>
       </section>
-      <section class="section section_menu">
+      <section id="menu" class="section section_menu">
         <h2 class="title title_white menu-accordion__title">Меню</h2>
         <div class="menu-accordion">
           <ul class="menu-accordion__list">
@@ -636,7 +636,7 @@
           </ul>
         </div>
       </section>
-      <section class="section">
+      <section id="reviews" class="section">
         <ul class="reviews__list">
           <li class="reviews__item" style="background-image: url('./img/photo-1.jpg');">
             <div class="reviews__content">
@@ -792,7 +792,7 @@
           </li>
         </ul>
       </section>
-      <section class="section section_how">
+      <section id="how" class="section section_how">
         <div class="container container_center">
           <h2 class="title title_black video__title">как мы работаем</h2>
           <div class="video">
@@ -837,7 +837,7 @@
           </div>
         </div>
       </section>
-      <section class="section section_order">
+      <section id="order" class="section section_order">
         <div class="container container_center">
           <h2 class="title form__head">Закажите доставку</h2>
           <form class="form" id="order_form">
@@ -913,7 +913,7 @@
           </form>
         </div>
       </section>
-      <section class="section">
+      <section id="contacts" class="section">
         <div class="map" id="map"></div>
         <footer class="footer">
           <div class="container footer__container">
