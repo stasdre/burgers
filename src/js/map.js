@@ -40,6 +40,7 @@ function setMarkers(map) {
       position: {lat: data[0], lng: data[1]},
       map: map,
       icon: image,
+      animation: google.maps.Animation.DROP
     });
   }
 }
