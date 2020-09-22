@@ -35,7 +35,7 @@
     "gulp-smile-px2rem": "^0.1.0",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.1",
-    "node-sass": "^4.11.0"
+    "node-sass": "^4.13.1"
   },
   "dependencies": {
     "jquery": "^3.3.1",
